@@ -1,10 +1,9 @@
 package com.example.demo.web;
-
 import com.example.demo.entites.Etudient;
 import com.example.demo.repositories.EtudientRespository;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
 //Controlleur the repository Etudient
 @RestController
 public class EtudientRestController {
@@ -20,15 +19,25 @@ public class EtudientRestController {
     }
     @GetMapping(path="/Etudient/{id}")
     public Etudient etudientList(@PathVariable Long id){
-         Etudient et=this.er.findById(id).get();
-
-        return et;
+            Etudient et=this.er.findById(id).get();
+            return et;
     }
 
     @PostMapping(path="/Etudient")
     public Etudient save(@RequestBody Etudient et){
         return er.save(et);
     }
+    /*@PutMapping(path="/Etudient")
+    public Etudient update(@PathVariable Long id,@RequestBody Etudient et){
+        et.setId(id);
+        return er.save(et);
+    }
+    @DeleteMapping(path="/Etudient/{id}")
+    public void delete(@PathVariable Long id){
+        er.deleteById(id);
+
+    }*/
+
 
 
 
