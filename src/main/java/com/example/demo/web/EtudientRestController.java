@@ -20,7 +20,7 @@ public class EtudientRestController {
     @GetMapping(path="/Etudient/{id}")
     public Etudient etudientList(@PathVariable Long id){
             Etudient et=this.er.findById(id).get();
-            return et;
+            return   et;
     }
 
     @PostMapping(path="/Etudient")
