@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 //Controlleur the repository Etudient
-@RestController
+//@RestController
+
 public class EtudientRestController {
    private EtudientRespository er;
 //constructeur the controller Etudient
