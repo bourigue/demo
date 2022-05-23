@@ -27,7 +27,7 @@ public class EtudientRestController {
 
     @PostMapping(path="/Etudient")
     public Etudient save(@RequestBody Etudient et){
-        return this.er.save(et);
+        return er.save(et);
     }
 
 
