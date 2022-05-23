@@ -27,7 +27,7 @@ public class EtudientRestController {
     public Etudient save(@RequestBody Etudient et){
         return er.save(et);
     }
-    /*@PutMapping(path="/Etudient")
+    @PutMapping(path="/Etudient")
     public Etudient update(@PathVariable Long id,@RequestBody Etudient et){
         et.setId(id);
         return er.save(et);
@@ -36,7 +36,7 @@ public class EtudientRestController {
     public void delete(@PathVariable Long id){
         er.deleteById(id);
 
-    }*/
+    }
 
 
 
